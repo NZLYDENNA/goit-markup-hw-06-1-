@@ -16,7 +16,7 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container {
-  width: 1158px;
+  width: 320px;
   margin: 0 auto;
   padding: 0 15px 0;
 }
@@ -107,6 +107,21 @@ img {
 .contacts-nav .contact:active {
   color: #404bbf;
 }
+@media (max-width: 767px) {
+  .page-nav,
+  .contacts-nav {
+    display: none;
+  }
+  .navigation {
+    padding: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1157px) {
+  .contacts {
+    flex-direction: column;
+  }
+}
+
 .servis {
   background-color: #2e2f42;
   padding: 188px 0;
@@ -120,6 +135,18 @@ img {
   background-position: center;
   background-size: cover;
   margin: auto;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .servis {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office@2x.jpg);
+  }
 }
 .container-servis {
   display: flex;
@@ -180,17 +207,24 @@ img {
 .featers-block-item {
   width: calc((100% - 72px) / 4);
 }
-.featers-icons-frame {
-  width: 264px;
-  height: 112px;
-  gap: 0px;
-  border-radius: 4px;
-  background-color: #f4f4fd;
-  border: 1px solid #8e8f99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
+@media (max-width: 1157px) {
+  .featers-block {
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1158px) {
+  .featers-icons-frame {
+    width: 264px;
+    height: 112px;
+    gap: 0px;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
 }
 
 .description {
@@ -508,6 +542,7 @@ input::placeholder {
   fill: #ffffff;
 }
 .modal-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
