@@ -210,8 +210,9 @@ img {
 .featers-block-item {
   width: calc((100% - 72px) / 4);
 }
-@media (max-width: 1157px) {
+@media (min-width: 320px) and (max-width: 1157px) {
   .featers-block {
+    flex-direction: column;
     flex-wrap: wrap;
   }
 }
