@@ -16,7 +16,7 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container {
-  width: 320px;
+  width: 1158px;
   margin: 0 auto;
   padding: 0 15px 0;
 }
@@ -114,6 +114,9 @@ img {
   }
   .navigation {
     padding: 16px;
+  }
+  .container {
+    width: 320px;
   }
 }
 @media (min-width: 768px) and (max-width: 1157px) {
